@@ -14,6 +14,45 @@
 
 
 
+ @media(min-width:1024px) and (max-width:1200px){
+    #header{ 
+        .nav{
+            width: 95%;
+            top:15px;
+            border-radius: 10px;
+            padding: 0 45px;
+            
+            .col-md-2{
+                .logo{
+                    top:5px;
+                }
+
+            }
+     
+            .middle { 
+                ul {
+                    display: flex;
+                    li{
+                        padding: 10px 6px;
+                        .second-menu{
+                            ul{
+                                display: block;
+                            }
+
+                    
+                    }
+                    }
+     }
+     .navright-link{
+        margin-top: 50px;
+        margin-left: -15px;
+     }
+              }
+    }
+
+    }
+
+}
 
 
 @media(min-width:376px)and(max-width:767px) {
@@ -109,14 +148,17 @@
 @media(min-width:376px) and(max-width:768px){
     #header{ 
         .nav{
-            width: 90%;
+            width: 95%;
             top:15px;
             border-radius: 10px;
             padding: 0 20px;
+            .col-md-2{
+                .logo{
+                    top:13px;
+                    }
 
-            .logo{
-                top:13px;
-                }
+            }
+           
             .middle { 
                 ul {
                     display: flex;
@@ -132,10 +174,14 @@
                     }
                 }
             }
-            .navright-link{
-                margin-top: 50px;
-                margin-left: -15px;
+            .col-md-1{
+                .navright-link{
+                    margin-top: 50px;
+                    margin-left: auto;
+                }
+
             }
+
         }
     }
     #header{
@@ -144,39 +190,32 @@
             bottom: 40px;
         }
     }
-    // #footer{
-    //     position: relative;
-    //     .content-section{
-    //         .left-content{
-    //             .images{
-    //                 .image-one{
-    //                     img{
-    //                         margin-left: 120px;
-    //                     }
-    //                 }
-    //                 .image-two{
-    //                     img{
-    //                         margin-left: 50px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //         .middle-content{
-    //             position: absolute;
-    //             bottom: 95px;
-    //             left: 35px;
-    //         }
-    //         .right-content{
-    //             ul{
-    //                 text-align: center;
-    //                 margin-top: 35px;
-    //                 left: 0;
-    //                 right: 0;
-    //             }
-    //         }
-    //     }
-    // }
+    .full-nav{
+        .full-navbar{
+            .col-md-9{
+            .middle{
+                margin-left: 10px;
+                ul{
+                    li{
+                        padding: 6px 0 0px 40px;
+                    }
+                }
+            }   
 
+            }
+        }
+    }
+    .basic{
+        .space-top{
+            max-width: calc(100% - 180px);
+        }
+    }
+    .part{
+        img{
+            padding: 0 130px;
+        }
+    }
+   
 }
 
 
@@ -214,7 +253,7 @@
 }
 @media(min-width:768px) and (max-width:1024px){
     .side-menu{
-        left: 10px;
+        left: 20px;
     }
    
 }
@@ -275,6 +314,9 @@
     }
 }
 @media(max-width:1200px){
+    #header{
+        min-height: 100vh;
+    }
     .questions  {
         .section{
             .question-item{
@@ -293,41 +335,6 @@
     }
 }
 
-@media(min-width:1024px) and (max-width:1200px){
-    #header{ 
-        .nav{
-            width: 90%;
-            top:15px;
-            border-radius: 10px;
-            padding: 0 45px;
-
-            .logo{
-                top:13px;
-            }
-            .middle { 
-                ul {
-                    display: flex;
-                    li{
-                        padding: 10px 6px;
-                        .second-menu{
-                            ul{
-                                display: block;
-                            }
-
-                    
-                    }
-                    }
-     }
-     .navright-link{
-        margin-top: 50px;
-        margin-left: -15px;
-     }
-              }
-    }
-
-    }
-
-}
 
 @media(min-width:991px) and  (max-width:1025px){
     #header{
@@ -348,27 +355,41 @@
  
 }
 @media(max-width:375px){
-
+    img{
+        padding-left: 30px;
+    }
+    .basic{
+        padding: 0;
+    }
+.second-heading{
+    text-transform: lowercase;
+}
     #header{
         .nav {
+            width: 100%;
+            top: 0;
+            border-radius: 0;
             padding: 20px 10px;
 
+            .col-md-2{
                 .logo{
-                    top:-15px;
+                    top:-20px;
                         img{
                             width: 120px;
-                            height: 90px;
+                            height: 80px;
                             }
-                        }
-                .middle{
-                            display: none;
-                            position: fixed;
-                            left: -100%;
-                            width: 100%;
-                            top:100%;
-                            border-radius: 0;
-                            background-color: #fff;
-                            @include prefixer(transition, all 3s ease-in-out,webkit moz o );
+                    }
+               }
+
+            .middle{
+                    display: none;
+                    position: fixed;
+                    left: -100%;
+                    width: 100%;
+                    top:100%;
+                    border-radius: 0;
+                    background-color: #fff;
+                    @include prefixer(transition, all 3s ease-in-out,webkit moz o );
 
                     li{
                         width: 100%;
@@ -411,7 +432,10 @@
                     }
                 .the-toggler{
                     display: block;
-                    
+                    .menu-icon,.close{
+                        font-size: 30px;
+                    }
+      
                     
                 }
                 .navbar-scroll{
@@ -431,65 +455,72 @@
                 top:0;
                 border-radius: 0;
                 padding:0 20px;
-            .logo{
-                top:0;
-                img{
-                    width: 120px;
-                    height: 90px;
-                }
-            }
-            .middle{
-                display: none;
-                position: fixed;
-                left: -100%;
-                width: 100%;
-                top:12%;
-                border-radius: 0;
-                background-color: #fff;
-                @include prefixer(transition, all 3s ease-in-out,webkit moz o );
-                    ul{
-                        li{
-                            width: 100%;
-                            border-bottom: 1px solid #eee;
-                            text-align: left;
-                            margin-top: 0;
-                            padding: 15px;
-
-                    
-                            .second-menu{
-                                padding-left: 15px;
-                                margin-top: 0;
-                                top:30px;
-                                @include prefixer(transition, all 1s ease-in-out,webkit moz o );
-
-                                ul{
-                                    box-shadow: none;
-                                    li{
-                                        padding: 5px;
-                                        border-bottom: 1px solid #fff;
-                                        @include prefixer(transition, all 1s ease-in-out,webkit moz o );
-
-                                    }
-                                }  
-                            
-                            }
+                .col-md-2{
+                    .logo{
+                        top:0;
+                        img{
+                            width: 120px;
+                            height: 90px;
                         }
                     }
-                    &.open{
-                        left:0%;
-                        display: block;
+                  }
+                .col-md-9{
+                    .middle{
+                        display: none;
+                        position: fixed;
+                        left: -100%;
+                        width: 100%;
+                        top:12%;
+                        border-radius: 0;
+                        background-color: #fff;
                         @include prefixer(transition, all 3s ease-in-out,webkit moz o );
+                            ul{
+                                li{
+                                    width: 100%;
+                                    border-bottom: 1px solid #eee;
+                                    text-align: left;
+                                    margin-top: 0;
+                                    padding: 15px;
+
+                            
+                                    .second-menu{
+                                        padding-left: 15px;
+                                        margin-top: 0;
+                                        top:30px;
+                                        @include prefixer(transition, all 1s ease-in-out,webkit moz o );
+
+                                        ul{
+                                            box-shadow: none;
+                                            li{
+                                                padding: 5px;
+                                                border-bottom: 1px solid #fff;
+                                                @include prefixer(transition, all 1s ease-in-out,webkit moz o );
+
+                                            }
+                                        }  
+                                    
+                                    }
+                                }
+                            }
+                            &.open{
+                                left:0%;
+                                display: block;
+                                @include prefixer(transition, all 3s ease-in-out,webkit moz o );
 
 
-                    }
+                            }
 
+                        }
                 }
+                .col-md-1{
+
                 .navright-link{
-                    margin-top: 0;
+                    margin:0;
                         a{
                             display: none;
                             }
                     }
+                }
                 .the-toggler{
                     display: block;
                      
@@ -499,32 +530,54 @@
         .side-menu{
             display: none;
         }
-        .questions{
-        .section{
-            max-width: 100%;
-                .question-item {
+
+        .questions  {
+            .section{
+                max-width: 100%;
+
+                .question-item{
                     margin-left: 10px;
-                .question-para{
-                    margin-left: 0px;
 
-                }
+                    .question-content{
 
+                        .question-para{
+                            margin-left: 10px;
+                            margin-top: 15px;                        }
+                        }
+                    }
                 }
-            }
         }
+        
+
+.basic{
+    .space-top{
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
         .sections {
             .section{
                 max-width: 100%;
                 padding: 70px 0 0 0;
                 margin-left: 15px;
-    
-    
+                .item{
+                    margin-left: 10px;
+                    .col-md-8{
+                        margin-left: 15px;
+                        margin-top: 20px;
+                    }
+
+                }
             }
         }
         .basic{
             .part{
                 max-width: 100%;
                 padding-top: 100px;
+                padding-left: 15px;
+                .first{
+                    margin-left: 20px;
+                }
 
             }
         }
@@ -552,7 +605,8 @@
             }
         }
         #footer{
-            height: 380px;
+            height: 400px;
+            margin-top: 100px;
             .content-section{
                 .left-content{
                     .images{
@@ -569,7 +623,7 @@
                     }
                 }
                 .middle-content{
-                    bottom:180px;
+                    bottom:195px;
                
     
                 }
